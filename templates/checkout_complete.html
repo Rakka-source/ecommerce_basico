@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compra Finalizada</title>
+</head>
+<body>
+    <h1>¡Gracias por tu compra!</h1>
+    <p>Enviaremos tu pedido a la siguiente dirección:</p>
+    <p><strong>{{ shipping_address }}</strong></p>
+    <p>Realiza la transferencia bancaria a la cuenta XXXX-XXXX-XXXX. Una vez completada, envía el comprobante al correo de soporte.</p>
+    <a href="{% url 'home' %}" class="title text-dark">Regresar</a>
+</body>
+</html>
