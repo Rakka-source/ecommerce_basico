@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+    container_name: django_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8081:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_NAME=ecommerce
+      - DB_USER=tallerUser
+      - DB_PASSWORD=Usm12345-
+      - DB_HOST=db
+      - DB_PORT=5432
+    networks:
+      - django_network 
+
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: tallerUser
+      POSTGRES_PASSWORD: Usm12345-
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - django_network 
+      - db_network
+volumes:
+  postgres_data:
+
+networks:
+  django_network:
+    name: django_network
+  db_network:  
+    name: db_network
+    external: true
