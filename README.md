@@ -2,3 +2,4 @@
 
 Proyecto para generar laboratorio de Taller Admin Sistemas. En la cual se busca emplear esta topologia. En la cual el servidor web contendra 2 stacks de docker. Este es uno, y el otro es rutas.
 ![image](https://github.com/user-attachments/assets/2ab0e418-2fab-47cc-8d15-f38e64c569b1)
+![ArquiTallerAdmin](https://github.com/user-attachments/assets/91704ab9-ea50-4c18-a2c6-fec105628f28)
