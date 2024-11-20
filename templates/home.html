@@ -6,7 +6,7 @@
     <div class="container">
     
     <div class="intro-banner-wrap">
-        <img src="{% static 'images/banners/blackfriday.png' %}" class="img-fluid rounded">
+        <img src="{% static 'images/banners/banner02.jpg' %}" class="img-fluid rounded">
     </div>
     
     </div> <!-- container //  -->
@@ -23,7 +23,7 @@
     </header><!-- sect-heading -->
     
     <div class="row">
-
+        {% if products %}
             {% for product in products %}
         <div class="col-md-3">
             <div class="card card-product-grid">
@@ -46,6 +46,7 @@
             </div>
         </div> <!-- col.// -->
         {% endfor %}
+        {% endif %}
     </div>
 
 </section>
